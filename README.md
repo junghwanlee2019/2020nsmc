@@ -445,3 +445,6 @@ print("Accuracy: {0:.2f}".format(eval_accuracy/nb_eval_steps))
 print("Test took: {:}".format(format_time(time.time() - t0)))
 ```
 
+참고 Github코드
+https://github.com/deepseasw/bert-naver-movie-review
+
