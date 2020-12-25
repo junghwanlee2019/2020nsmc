@@ -5,12 +5,12 @@
 1) 본인의 컴퓨터 혹은 구글 Colab 라이브러리를 DATA PATH로 잡아준다
 
 '''
-from google.colab import drive 
+[from google.colab import drive 
 drive.mount('/content/gdrive')
 
 DATA_PATH = 'gdrive/My Drive/Colab Notebooks/'
 import sys
-sys.path.append(DATA_PATH)
+sys.path.append(DATA_PATH)]
 
 '''
 
