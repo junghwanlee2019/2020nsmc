@@ -2,7 +2,7 @@
 
 네이버영화평점분류자료 실행방법
 
-1) 본인의 컴퓨터 혹은 구글 Colab 라이브러리를 DATA PATH로 잡아준다
+1) 본인의 컴퓨터 혹은 구글 Colab 라이브러리를 DATA PATH로 잡아준다. PATH에 미리 ko_data.csv 파일을 받아 저장해놓는다 
 
 ```
 from google.colab import drive 
