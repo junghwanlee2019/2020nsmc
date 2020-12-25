@@ -4,6 +4,7 @@
 
 1) 본인의 컴퓨터 혹은 구글 Colab 라이브러리를 DATA PATH로 잡아준다
 
+
 from google.colab import drive 
 drive.mount('/content/gdrive')
 
@@ -12,7 +13,9 @@ import sys
 sys.path.append(DATA_PATH)
 
 
+
 2) 트랜스포머를 설치하고 필요한 각종 라이브러리를 설치해준다
+
 
 !pip install transformers
 
@@ -33,7 +36,9 @@ import time
 import datetime
 
 
+
 3) 데이터를 다운로드한다. 판다스로 데이터를 불러올때 최종 테스트 데이터는 DATA_PATH를 설정해주어야 한다. 
+
 
 !git clone https://github.com/e9t/nsmc.git
 
@@ -46,9 +51,11 @@ print(test.shape)
 print(sec_test.shape)
 
 
+
 4) 훈련 데이터셋에 리뷰 및 라벨데이터를 넣어주고 버트에 맞도록 형식 변경을 해준다. 버트는 토크나이저를 통하여 토큰화해준다. 
 데이터의 길이를 설정해줄 수 있는데 영화 평점 데이터이므로 길이는 128이면 충분하다. 이후 토큰을 숫자 인덱스로 변환해준다.
 테스트데이터셋도 같은 과정을 거친다. 
+
 
 sentences = train['document']
 sentences[:10]
@@ -68,7 +75,9 @@ input_ids = pad_sequences(input_ids, maxlen=MAX_LEN, dtype="long", truncating="p
 
 input_ids[0]
 
+
 5) 어텐션 마스크를 설정해준다. 그리고 데이터와 어텐션 마스크를 트레이닝과 검증셋으로 분리해준다. 이후 파이토치로 수행하기 위해 파이토치의 텐서로 변경을 수행해준다. 
+
 
 attention_masks = []
 
